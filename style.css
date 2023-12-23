@@ -1,0 +1,535 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button {
+    padding: 10px 30px;
+    margin: 20px 30px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 87%;
+
+}
+
+
+
+.songbox {
+    min-height: 70.4vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    width: 70%;
+    margin: 75px auto;
+    border-radius: 20px;
+    padding: 34px;
+    justify-content: center;
+    /* border: 1px solid white; */
+    margin-top: 0%;
+}
+
+.ani {
+    animation-name: song;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes song {
+    0% {
+        box-shadow: 11px 1px 60px red;
+    }
+
+    25% {
+        box-shadow: 1px 11px 60px orange;
+
+    }
+
+    50% {
+        box-shadow: 11px 1px 60px yellow;
+
+    }
+
+    75% {
+        box-shadow: 1px 11px 60px green;
+
+    }
+
+    100% {
+        box-shadow: 1px 1px 60px red;
+
+    }
+}
+
+
+
+.controls {
+    position: sticky;
+    /* height: 90px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    color: white;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    margin-top: 54%;
+    margin-left: -73%;
+}
+
+.icon {
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.icon i {
+    margin: 0 10px;
+    color: black;
+}
+
+#pro {
+    height: 2px;
+    width: 15vw;
+    cursor: pointer;
+
+}
+
+.songlist {
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-right: 12px;
+    background-color: white;
+}
+
+
+.songs {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    color: white;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.songs:hover {
+    background-color: rgb(247, 70, 70);
+    color: white;
+}
+
+.songs img {
+    width: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+
+
+}
+
+.time {
+    margin: 0 23px;
+}
+
+.time i {
+    cursor: pointer;
+}
+
+.songinfo {
+    position: absolute;
+    left: 30vw;
+    margin-top: 2%;
+}
+
+.songinfo img {
+    margin-left: -30%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+
+
+.songbanner {
+    height: 60vh;
+    width: 50%;
+    display: flex;
+    margin-left: 5%;
+    justify-content: center;
+
+}
+
+
+
+.image {
+    height: 33vh;
+    width: 45%;
+    background-image: url(img/song1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid black; */
+    margin-top: 8%;
+    border-radius: 50%;
+    margin-left: 15%;
+}
+
+
+.im {
+
+    animation: img .5s infinite;
+    animation: rot 50s infinite;
+}
+
+@keyframes img {
+    0% {
+        box-shadow: 11px 1px 60px red;
+    }
+
+    25% {
+        box-shadow: 1px 11px 60px orange;
+
+    }
+
+    50% {
+        box-shadow: 11px 1px 60px yellow;
+
+    }
+
+    75% {
+        box-shadow: 1px 11px 60px green;
+
+    }
+
+    100% {
+        box-shadow: 1px 1px 60px red;
+
+
+    }
+}
+
+@keyframes rot {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#n {
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+#currentTime {
+    color: black;
+}
+
+h5 {
+    margin-top: 50%;
+    margin-left: -280%;
+}
+
+#h5 {
+    margin-top: -62%;
+    margin-left: 280%;
+}
+
+#drop{
+    font-size: 30px;
+    cursor: pointer;
+}
+p{
+    color: white;
+    display: none;
+}
+
+@media(max-width:1025px){
+   .songlist{
+    display: none;
+   }
+   .songlist{
+    margin-left: 10%;
+   }
+   
+    .songbox{
+    width: 50%;
+   }
+   .image{
+    width: 100%;
+   }
+   .controls{
+    
+    margin-top: 90%;
+    margin-left: -80%;
+   }
+   
+   #drop{
+    margin-left: -50%;
+    margin-top: 150%;
+    background-color: black;
+    padding: 20px 20px;
+    border-radius: 10px;
+
+   }
+   p{
+    display: block;
+   }
+   #pro{
+    width: 18vw;
+   }
+   h5 {
+    margin-top: 50%;
+    margin-left: -240%;
+}
+
+#h5 {
+    margin-top: -62%;
+    margin-left: 240%;
+}
+#n{
+    font-size: 15px;
+}
+}
+
+@media(max-width:1000px){
+    #drop{
+        margin-left: -75%;
+    }
+}
+
+
+@media(max-width:950px){
+    .controls{
+        width: 110%;
+    }
+    .image{
+        height: 30vh;
+    }
+    h5 {
+        margin-top: 50%;
+        margin-left: -210%;
+    }
+    
+    #h5 {
+        margin-top: -62%;
+        margin-left: 210%;
+    }
+}
+
+@media(max-width:900px){
+    .songbox {
+        width: 54%;
+    }
+}
+@media(max-width:850px){
+    .songbox {
+        width: 58%;
+    }
+}
+
+@media(max-width:800px){
+    .songbox {
+        width: 63%;
+    }
+}
+
+
+@media(max-width:750px){
+    .songbox {
+        width: 69%;
+    }
+    #pro {
+        width: 24vw;
+    }
+}
+@media(max-width:700px){
+    .songbox {
+        width: 75%;
+    }
+    .image {
+        height: 32vh;
+    }
+}
+
+@media(max-width:650px){
+    .songbox {
+        width: 83%;
+        margin-left: 13%;
+    }
+    #pro {
+        width: 27vw;
+    }
+}
+
+@media(max-width:600px){
+    .songbox {
+        width: 92%;
+        margin-left: 10%;
+    }
+    #pro {
+        width: 29vw;
+    }
+}
+
+@media(max-width:550px){
+    .songbox {
+        width: 103%;
+        margin-left: 6%;
+    }
+}
+
+@media(max-width:500px){
+    .songbox {
+        width: 109%;
+        margin-left: 4%;
+    }
+    #drop {
+        margin-left: -93%;
+    }
+    #pro {
+        width: 39vw;
+    }
+}
+
+@media(max-width:450px){
+    .songbox {
+        width: 85%;
+        height: 96vh;
+        margin-left: 7.5%;
+        margin-top: 3%;
+        border: 1px solid white;
+    }
+    button {
+        padding: 4px 6px;
+        position: absolute;
+        margin-left: 75%;
+    }
+    i#drop {
+        padding: 10px 10px;
+        margin-left: -122%;
+        margin-top: -20%;
+    }
+    .controls {
+        width: 270%;
+        margin-top: 230%;
+        margin-left: -122%;
+    }
+    .image {
+        height: 26vh;
+        width: 200%;
+        margin-top: 83%;
+        margin-left: -19%;
+    }
+    .songlist {
+        margin-left: 1%;
+        margin-top: 13%;
+        height: 65vh;
+        border-radius: 7px;
+    }
+    
+}
+
+@media(max-width:400px){
+    i#drop {
+        padding: 10px 10px;
+        margin-left: -105%;
+        margin-top: -28%;
+        font-size: 21px;
+    }
+    .songbox {
+        width: 85%;
+        height: 86vh;
+        margin-left: 7.5%;
+        margin-top: 4%;
+        border: 1px solid white;
+    }
+    button {
+        padding: 4px 6px;
+        position: absolute;
+        margin-left: 72%;
+        font-size: 12px;
+    }
+    .controls {
+        width: 330%;
+        margin-top: 230%;
+        margin-left: -130%;
+        font-size: 12px;
+    }
+    .image {
+        height: 26vh;
+        width: 274%;
+        margin-top: 83%;
+        margin-left: -29%;
+    }
+    .songlist {
+        margin-left: 1%;
+        margin-top: 13%;
+        height: 65vh;
+        border-radius: 7px;
+        width: 80%;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:350px){
+    .controls {
+        width: 380%;
+        margin-top: 280%;
+        margin-left: -137%;
+        font-size: 11px;
+    }
+    .image {
+        height: 23vh;
+        width: 333%;
+        margin-top: 114%;
+        margin-left: -41%;
+    }
+    .songlist {
+        margin-left: 1%;
+        margin-top: 13%;
+        height: 60vh;
+        border-radius: 7px;
+        width: 80%;
+        font-size: 8px;
+    }
+    .songbox {
+        width: 85%;
+        height: 86vh;
+        margin-left: 7.5%;
+        margin-top: 4%;
+        border: 1px solid white;
+    }
+}
